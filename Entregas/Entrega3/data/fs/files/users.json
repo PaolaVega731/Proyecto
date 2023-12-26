@@ -1,0 +1,27 @@
+[
+    
+  {
+    "id": 1,
+    "name": "Roberto",
+    "photo": "imagen1.jpg",
+    "email": "roberto@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Mabel",
+    "photo": "imagen2.jpg",
+    "email": "mabel@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Andres",
+    "photo": "imagen_prueba.jpg",
+    "emial": "andres@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Roberto",
+    "photo": "foto_prueba.jpg",
+    "email": "roberto@gmail.com"
+  }
+]
