@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Keyboard",
+    "photo": "imagen1.jpg",
+    "price": 80,
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "title": "Mouse",
+    "photo": "imagen2.jpg",
+    "price": 50,
+    "stock": 30
+  },
+  {
+    "id": 3,
+    "title": "Notebook stand",
+    "photo": "imagen_prueba.jpg",
+    "price": 15,
+    "stock": 20
+  },
+  {
+    "id": 1,
+    "title": "Keyboard",
+    "photo": "imagen1.jpg",
+    "price": 80,
+    "stock": 50
+  },
+  {
+    "id": "c675a342a9e8be9605eaa0ba",
+    "title": "Notebook stand",
+    "photo": "imagen_prueba.jpg",
+    "price": 15,
+    "stock": 20
+  },
+  {
+    "id": "89c076f1046cb195e9c6831f",
+    "title": "Notebook stand",
+    "photo": "imagen_prueba.jpg",
+    "price": 15,
+    "stock": 20
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Roberto",
+    "photo": "imagen1.jpg",
+    "email": "roberto@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Mabel",
+    "photo": "imagen2.jpg",
+    "email": "mabel@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Andres",
+    "photo": "imagen_prueba.jpg",
+    "email": "andres@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Roberto",
+    "photo": "foto_prueba.jpg",
+    "email": "roberto@gmail.com"
+  },
+  {
+    "id": "208c2c6537fa09a2e35c6142",
+    "name": "Rafael",
+    "photo": "imagen_prueba.jpg",
+    "email": "rafael@gmail.com"
+  }
+]
