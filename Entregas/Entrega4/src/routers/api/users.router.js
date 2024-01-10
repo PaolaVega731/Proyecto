@@ -46,18 +46,17 @@ usersRouter.get("/", async (req, res, next) => {
 usersRouter.get("/:uid", async (req, res, next) => {
   try {
     const { uid } = req.params;
-    const one = await users.readUsers(uid);
-    if (typeof one === "string") {
-      return res.json({
+    const one = await users.readUserById(uid);
+    if (!one) {
+      return res.status(404).json({
         statusCode: 404,
-        message: one,
-      });
-    } else {
-      return res.json({
-        statusCode: 200,
-        response: one,
+        message: `User with ID ${uid} not found`,
       });
     }
+    return res.status(200).json({
+      statusCode: 200,
+      response: [one],
+    });
   } catch (error) {
     return next(error);
   }

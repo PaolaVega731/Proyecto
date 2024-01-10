@@ -1,12 +1,13 @@
 import { Router } from "express";
 import propsOrders from "../../middlewares/propsOrders.mid.js";
-import orders from "../../data/fs/orders.fs.js";
+import order from "../../data/fs/orders.fs.js";
+import OrderManager from "../../data/memory/orders.memory.js";
 const ordersRouter = Router();
 
 ordersRouter.post("/", propsOrders, async (req, res, next) => {
   try {
     const data = req.body;
-    const response = await OrderManager.createOrder(data);
+    const response = await order.createOrder(data);
 
     return res.json({
       statusCode: 201,
@@ -16,30 +17,45 @@ ordersRouter.post("/", propsOrders, async (req, res, next) => {
     return next(error);
   }
 });
+ordersRouter.get("/", async (req, res, next) => {
+  try {
+    const allOrders = order.read();
+    return res.json({
+      statusCode: 200,
+      response: allOrders,
+    });
+  } catch (error) {
+    return next(error);
+  }
+});
+
 ordersRouter.get("/:oid", async (req, res, next) => {
   try {
     const { oid } = req.params;
-    const userOrders = await orders.readOne(oid);
+    const userOrder = await order.readOne(oid);
 
-    if (Array.isArray(userOrders)) {
+    if (userOrder) {
       return res.json({
         statusCode: 200,
-        response: userOrders,
+        response: userOrder,
       });
     } else {
       return res.json({
         statusCode: 404,
-        message: userOrders,
+        message: "Order not found",
       });
     }
   } catch (error) {
-    return next(error);
+    return res.json({
+      statusCode: 404,
+      message: error.message,
+    });
   }
 });
 ordersRouter.delete("/:oid", async (req, res, next) => {
   try {
     const { oid } = req.params;
-    const response = await orders.destroy(oid);
+    const response = await OrderManager.destroy(oid);
 
     if (response === "Order not found") {
       return res.json({
@@ -54,6 +70,24 @@ ordersRouter.delete("/:oid", async (req, res, next) => {
     }
   } catch (error) {
     return next(error);
+  }
+});
+ordersRouter.put("/:oid", async (req, res, next) => {
+  try {
+    const { oid } = req.params;
+    const { quantity, state } = req.body;
+
+    const updatedOrder = await order.update(oid, quantity, state);
+
+    return res.json({
+      statusCode: 200,
+      response: updatedOrder,
+    });
+  } catch (error) {
+    return res.json({
+      statusCode: 404,
+      message: error.message,
+    });
   }
 });
 

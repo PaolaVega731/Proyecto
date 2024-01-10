@@ -33,6 +33,7 @@ class OrderManager {
 
   static update(oid, quantity, state) {
     try {
+      console.log("Received order ID:", oid);
       const order = OrderManager.#orders.find((order) => order.id === oid);
       if (!order) {
         throw new Error("Order not found");
@@ -45,7 +46,7 @@ class OrderManager {
       if (state !== undefined) {
         order.state = state;
       }
-
+      console.log("Updated order:", order);
       return order;
     } catch (error) {
       throw new Error(`Failed to update order: ${error.message}`);
@@ -54,7 +55,10 @@ class OrderManager {
 
   static destroy(oid) {
     try {
-      const index = OrderManager.#orders.findIndex((order) => order.id === oid);
+      console.log("Attempting to destroy order with ID:", oid);
+      const index = OrderManager.#orders.findIndex(
+        (order) => order.id === parseInt(oid)
+      );
       if (index === -1) {
         throw new Error("Order not found");
       }
