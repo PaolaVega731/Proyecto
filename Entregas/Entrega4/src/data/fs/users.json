@@ -28,5 +28,17 @@
     "name": "Rafael",
     "photo": "imagen_prueba.jpg",
     "email": "rafael@gmail.com"
+  },
+  {
+    "id": "7d2b532239f1cabade67c7fe",
+    "name": "Rafael",
+    "photo": "imagen_prueba.jpg",
+    "email": "rafael@gmail.com"
+  },
+  {
+    "id": "6490dff1b668df9b42683a64",
+    "name": "Roberto",
+    "photo": "foto_prueba.jpg",
+    "email": "roberto@gmail.com"
   }
 ]

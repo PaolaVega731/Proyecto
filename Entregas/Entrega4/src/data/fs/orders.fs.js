@@ -61,13 +61,27 @@ class OrderManager {
     return this.#orders;
   }
 
-  readOne(uid) {
-    return this.#orders.filter((order) => order.uid === uid);
+  readOne(oid) {
+    console.log("Searching for order with ID:", oid);
+    const foundOrders = this.#orders.find(
+      (order) => order.id === parseInt(oid)
+    );
+
+    if (foundOrders) {
+      return foundOrders;
+    } else {
+      console.log("Order not found");
+      throw new Error("Order not found");
+    }
   }
 
   async update(oid, quantity, state) {
     try {
-      const orderIndex = this.#orders.findIndex((order) => order.id === oid);
+      console.log("Received order ID:", oid);
+
+      const orderIndex = this.#orders.findIndex(
+        (order) => order.id === parseInt(oid)
+      );
       if (orderIndex === -1) {
         throw new Error("Order not found");
       }
@@ -90,7 +104,9 @@ class OrderManager {
 
   async removeOrder(oid) {
     try {
-      const orderIndex = this.#orders.findIndex((order) => order.id === oid);
+      const orderIndex = this.#orders.findIndex(
+        (order) => order.id === parseInt(oid)
+      );
       if (orderIndex === -1) {
         throw new Error("Order not found");
       }

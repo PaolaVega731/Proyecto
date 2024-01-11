@@ -61,9 +61,9 @@ class UsersManager {
     try {
       const one = this.users.find((each) => each.id === id);
       if (!one) {
-        throw new Error("There isn't any user with id=" + id);
+        throw new Error(`There isn't any user with id=${id}`);
       } else {
-        console.log("read " + one);
+        console.log("read ", one);
         return one;
       }
     } catch (error) {
