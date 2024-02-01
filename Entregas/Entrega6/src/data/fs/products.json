@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "Keyboard",
+    "photo": "https://th.bing.com/th/id/OIP.yH83hBFDy1cq8iNh6lTALQHaE8?rs=1&pid=ImgDetMain",
+    "price": 80,
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "title": "Mouse",
+    "photo": "https://th.bing.com/th/id/OIP.9UkmnrreEXfd6twa_HhnJgHaF3?rs=1&pid=ImgDetMain",
+    "price": 50,
+    "stock": 30
+  },
+  {
+    "id": 3,
+    "title": "Notebook stand",
+    "photo": "https://th.bing.com/th/id/OIP.mv9ancJUbRGxsvXNBrx_kQHaHa?rs=1&pid=ImgDetMain",
+    "price": 15,
+    "stock": 20
+  },
+  {
+    "id": 4,
+    "title": "Notebook",
+    "photo": "https://th.bing.com/th/id/R.2498161a3ebbb1a05ad861aabbd70f4c?rik=JfvvikdTB%2bz8gA&pid=ImgRaw&r=0",
+    "price": 1500,
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "title": "Screen Philips",
+    "photo": "https://th.bing.com/th/id/OIP.I0PHBkl17NBcBxJ-rybO2wHaGR?rs=1&pid=ImgDetMain",
+    "price": 300,
+    "stock": 20
+  },
+  {
+    "id": 6,
+    "title": "Desk",
+    "photo": "https://i.pinimg.com/originals/2e/2f/75/2e2f7574f69e8b1350a84f8312c87800.png",
+    "price": 150,
+    "stock": 10
+  },
+  {
+    "id": "9d862ac8a9c9012a19337cd0",
+    "title": "Porta celular",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Gt1w54ZxZen6dKyMwAySKCX8lSNqfzOJzgwv05J4eA&s",
+    "price": 30,
+    "stock": 3
+  },
+  {
+    "id": "afea1a5494843bd7c7f5b504",
+    "title": "Mouse Pad",
+    "photo": "https://th.bing.com/th/id/OIP.q3SHvxXWEbXDwy5edPp_fQHaHa?rs=1&pid=ImgDetMain",
+    "price": 30,
+    "stock": 20
+  },
+  {
+    "id": "7e553ae305645f16569bbd16",
+    "title": "Mouse Pad",
+    "photo": "https://th.bing.com/th/id/OIP.q3SHvxXWEbXDwy5edPp_fQHaHa?rs=1&pid=ImgDetMain",
+    "price": 30,
+    "stock": 20
+  },
+  {
+    "id": "6b7aeddf478be86079dcfed2",
+    "title": "Samgung",
+    "photo": "https://th.bing.com/th/id/OIP.Kvk1Hpe9P6sBsEH8PbYivwHaE8?rs=1&pid=ImgDetMain",
+    "price": 1000,
+    "stock": 10
+  },
+  {
+    "id": "65bab4f3ded96b36bfad6476",
+    "title":"Cargador inalambrico",
+    "photo": "https://http2.mlstatic.com/cargador-inalambrico-samsung-carga-rapida-100-original-D_NQ_NP_930905-MLM31219570219_062019-F.jpg",
+    "price": 600,
+    "stock": 35
+}
+]
