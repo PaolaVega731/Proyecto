@@ -1,0 +1,17 @@
+<main class="flex-grow-1 p-3 my-2">
+  <h2 class="text-center">YOUR SHOPPING CART</h2>
+  <section class="d-flex flex-grow-1 flex-wrap justify-content-evenly">
+    {{#each carrito}}
+      <div class="card m-2" style="width: 320px;">
+        <div class="card-body d-flex flex-column justify-content-center">
+          <h5 class="card-title text-center">{{this.product}}</h5>
+          <p class="card-text text-center">
+            <strong>Cantidad:</strong> {{this.quantity}}<br>
+            <strong>Precio:</strong> ${{this.price}}
+          </p>
+          <button type="button" class="btn btn-danger btn-add-to-cart" data-product-id="{{this._id}}">ADD TO CART!</button>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+</main>

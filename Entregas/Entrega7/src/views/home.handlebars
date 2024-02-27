@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBoutique</title>
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th/id/OIG.HXB4hesW5.X1.zi.yLi_?pid=ImgGn');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; 
+            font-family: Arial, sans-serif; 
+            padding: 20px;
+        }
+
+        main {
+            text-align: center; 
+            max-width: 800px;
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.7); 
+        }
+    </style>
+</head>
+<body>
+<main>
+  <h1 class="text-center my-5">TechBoutique</h1>
+  
+  
+  {{#if details}}
+    <p>{{details}}</p>
+  {{else}}
+    <div class="d-flex align-items-center justify-content-center">
+      <p class="text-center font-weight-bold text-zoom-on-hover transition">
+        <strong>
+          ¡Bienvenido a TechBoutique, tu destino exclusivo para la última tecnología con estilo! En nuestra boutique digital, encontrarás una cuidada selección de notebooks elegantes, mouse innovadores, escritorios modernos y accesorios únicos para potenciar tu espacio de trabajo. Explora nuestra colección donde la tecnología y el diseño se encuentran, creando un equilibrio perfecto entre funcionalidad y estilo. ¡Haz de tu experiencia de compra algo extraordinario en TechBoutique!
+        </strong>
+      </p>
+    </div>
+  {{/if}}
+
+  
+  <div class="container mt-5">
+    <div class="row">
+      {{#each products}}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{{this.photo}}" class="card-img-top" alt="{{this.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <p class="card-text">Price: ${{this.price}}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  
+  <div class="container mt-5">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        {{#if hasNextPage}}
+          <li class="page-item {{#if isCurrentPage}}active{{/if}}">
+            <a class="page-link" href="{{nextPageUrl}}">Next</a>
+          </li>
+        {{/if}}
+        {{#if hasPrevPage}}
+          <li class="page-item {{#if isCurrentPage}}active{{/if}}">
+            <a class="page-link" href="{{prevPageUrl}}">Previous</a>
+          </li>
+        {{/if}}
+      </ul>
+    </nav>
+  </div>
+</main>
+</body>
+</html>
